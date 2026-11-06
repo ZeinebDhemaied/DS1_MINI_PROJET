@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DouaneTemporelle</string>
+
+    <string name="motif_modif">Modification du passé</string>
+    <string-array name="motifs">
+        <item>Tourisme</item>
+        <item>Modification du passé</item>
+        <item>Fuite</item>
+    </string-array>
+</resources>
