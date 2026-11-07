@@ -1,10 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VerificationActivity">
+    android:orientation="horizontal"
+    android:weightSum="1"
+    android:background="@color/navy"
+    android:padding="12dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- el image 3al isar: weight 0.3 -->
+    <ImageView
+        android:id="@+id/iv_passeport_nj"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:scaleType="centerInside"
+        android:src="@drawable/image_passport" />
+
+    <!-- el RelativeLayout 3al imin: weight 0.7 -->
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:layout_margin="8dp"
+        android:background="@color/beige"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_titre_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PASSEPORT TEMPOREL"
+            android:textColor="@color/brown"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_nom_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_titre_nj"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/brown"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_age_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nom_nj"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/brown"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_motif_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_age_nj"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/brown"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/btn_refuser_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/red"
+            android:text="Refuser (Risque de paradoxe)"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_approuver_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_refuser_nj"
+            android:text="Approuver le saut temporel"
+            android:backgroundTint="@color/green"/>
+    </RelativeLayout>
+</LinearLayout>

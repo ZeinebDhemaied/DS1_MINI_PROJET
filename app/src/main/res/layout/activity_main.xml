@@ -1,49 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp">
+    android:background="@color/navy"
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/tv_titre_nj"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Douane Temporelle"
-        android:textSize="26sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
 
-    <EditText
-        android:id="@+id/et_nom_nj"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nom du voyageur" />
+        <TextView
+            android:id="@+id/tv_titre_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DOUANE TEMPORELLE"
+            android:textColor="@color/gold"
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/et_naissance_nj"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Année de naissance (ex: 1990)"
-        android:inputType="number" />
+        <TextView
+            android:id="@+id/tv_sous_titre_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Poste de contrôle des voyageurs du temps"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
 
-    <EditText
-        android:id="@+id/et_destination_nj"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Année de destination (ex: 2050)"
-        android:inputType="number" />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp">
 
-    <Spinner
-        android:id="@+id/sp_motif_nj"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:entries="@array/motifs" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
 
-    <Button
-        android:id="@+id/btn_inspecter_nj"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Inspecter le profil" />
-</LinearLayout>
+                <EditText
+                    android:id="@+id/et_nom_nj"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nom du voyageur"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/navy"
+                    android:textColorHint="@color/gray" />
+
+                <EditText
+                    android:id="@+id/et_naissance_nj"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Année de naissance (ex: 1990)"
+                    android:inputType="number"
+                    android:textColor="@color/navy"
+                    android:textColorHint="@color/gray" />
+
+                <EditText
+                    android:id="@+id/et_destination_nj"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Année de destination (ex: 2050)"
+                    android:inputType="number"
+                    android:textColor="@color/navy"
+                    android:textColorHint="@color/gray" />
+
+                <Spinner
+                    android:id="@+id/sp_motif_nj"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:entries="@array/motifs" />
+
+                <Button
+                    android:id="@+id/btn_inspecter_nj"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="@color/gold"
+                    android:text="Inspecter le profil"
+                    android:textColor="@color/navy"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>
